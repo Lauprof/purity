@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap');
+  
+  
+  @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+*{
+ padding:0px;
+ margin:0px;
+ box-sizing: border-box;
+ 
+}
+
+
+
+.loader {
+    border: 10px solid whitesmoke;
+    
+    border-top: 10px solid orangered;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.top{
+  position:fixed;
+  top:0px;
+  padding:15px;
+  
+  font-size:20px;
+  
+  width:100%;
+ font-family: 'Lato', sans-serif;
+  
+  background-color: black;
+}
+.top img{
+  border-radius: 100%;
+  float: right;
+  
+}
+#welcome{
+  width:140px;
+  
+  height:10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: white;
+  text-shadow: 2px 2px 4px #ff0000;
+  transform:skewY(-20deg);
+  
+}
+#time{
+  
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  transform:skewX(30deg);
+  
+}
+
+  
+
+body{
+/*  background-image:linear-gradient(to bottom right,white,whitesmoke);*/
+  background-image: url("logo.png");
+  
+  
+  
+}
+
+div.gallery {
+  
+  
+  margin: 0px 5px;
+  border: 1px solid #ccc;
+  
+  
+  width: 96%;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+  /*animation: spinning 5s linear;*/
+}
+@keyframes spinning {
+    0% { transform: scale(0.5,0.5); }
+    100% { transform: scale(1,1); }
+}
+div.desc {
+  padding: 5px;
+  font-size: 0.8em;
+  color:black;
+  text-align: center;
+  font-family: 'Roboto Serif', serif;
+}
+
+
+div.gallery img:hover{
+  
+  transform:scale(0.5,0.5);
+  transition-duration: 3s;
+  
+  
+  
+  
+}
+
+#foot{
+  padding:25px;
+  background-color:black;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Lato', sans-serif;
+  color:white;
+}
+
+@media only screen and (min-width:768px){
+  
+  div.gallery{
+    float:left;
+    width:45%;
+    padding:10px;
+    margin:15px;
+    
+  }
+  .row::after{
+    content:"";
+    clear:both;
+    display:table;
+  }
+  .top{
+    padding:35px;
+    
+    font-size: 2em;
+  }
+  .desc{
+    padding:15px;
+    font-size: 2.5em;
+  }
+  
+}
